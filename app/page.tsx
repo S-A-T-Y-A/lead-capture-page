@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold mb-6">
-        Welcome to Our Lead Capture Page
+        Welcome to Our Lead Capture Form Page
       </h1>
       <p className="text-lg mb-8">
         Please fill out the form below to get in touch with us.
