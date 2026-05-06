@@ -1,5 +1,8 @@
 import Leads from "../components/Leads";
-
+export const metadata = {
+  title: "Leads Page",
+  description: "View submitted leads from the lead capture form",
+};
 export default function LeadsPage() {
   return (
     <main className="max-w-3xl mx-auto p-4">
