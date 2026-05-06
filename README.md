@@ -1,4 +1,3 @@
-
 # Lead Capture Page
 
 **Hosted on Vercel:**
@@ -22,20 +21,20 @@ This is a take-home project for Secco Squared, built with Next.js (App Router), 
 ## Getting Started
 
 1. Clone the repo and install dependencies:
-	```sh
-	git clone https://github.com/S-A-T-Y-A/lead-capture-page.git
-	cd lead-capture-page
-	npm install
-	```
+   ```sh
+   git clone https://github.com/S-A-T-Y-A/lead-capture-page.git
+   cd lead-capture-page
+   npm install
+   ```
 2. Create a `.env.local` file with your Supabase credentials:
-	```env
-	NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-	NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-	```
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   ```
 3. Run locally:
-	```sh
-	npm run dev
-	```
+   ```sh
+   npm run dev
+   ```
 
 ## Deployment
 
@@ -47,6 +46,7 @@ Deployed on [Vercel](https://vercel.com/). Pushes to `main` auto-deploy.
 - RLS policies are set so only inserts are allowed anonymously; selects are allowed for the app but not for direct client access.
 
 ---
+
 For any questions, contact Satya Nandan.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
