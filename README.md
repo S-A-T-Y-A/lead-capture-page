@@ -1,3 +1,53 @@
+
+# Lead Capture Page
+
+**Hosted on Vercel:**
+👉 [https://lead-capture-page-blue.vercel.app/](https://lead-capture-page-blue.vercel.app/)
+
+This is a take-home project for Secco Squared, built with Next.js (App Router), TypeScript, Tailwind CSS, and Supabase.
+
+## Pages
+
+- **/** — Landing page with a lead capture form. Visitors can submit their info (full name, email, company, source, message). On submit, the data is validated, saved to Supabase, and forwarded to a webhook. Success and error states are handled gracefully.
+
+- **/leads** — Displays all submitted leads in a table (name, email, company, source, submitted date), sorted by most recent. No authentication required, but Supabase RLS policies prevent direct client reads.
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Supabase (database & API)
+
+## Getting Started
+
+1. Clone the repo and install dependencies:
+	```sh
+	git clone https://github.com/S-A-T-Y-A/lead-capture-page.git
+	cd lead-capture-page
+	npm install
+	```
+2. Create a `.env.local` file with your Supabase credentials:
+	```env
+	NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+	NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+	```
+3. Run locally:
+	```sh
+	npm run dev
+	```
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com/). Pushes to `main` auto-deploy.
+
+## Notes
+
+- Webhook POST includes `X-Candidate-Name` header as required.
+- RLS policies are set so only inserts are allowed anonymously; selects are allowed for the app but not for direct client access.
+
+---
+For any questions, contact Satya Nandan.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
