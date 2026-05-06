@@ -29,6 +29,12 @@ export default function LeadForm() {
       setError("Full name and email are required.");
       return;
     }
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
