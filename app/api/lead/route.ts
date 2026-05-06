@@ -22,6 +22,14 @@ export async function POST(req: NextRequest) {
 			.single();
 
 		if (error) {
+			// Check for duplicate email unique constraint violation
+			if (
+				error.message &&
+				error.message.includes('duplicate key value violates unique constraint') &&
+				error.message.includes('leads_email_key')
+			) {
+				return NextResponse.json({ error: 'This email has already been submitted.' }, { status: 400 });
+			}
 			return NextResponse.json({ error: error.message }, { status: 400 });
 		}
 
