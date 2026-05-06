@@ -9,8 +9,6 @@ export async function POST(req: NextRequest) {
 	try {
 		const body = await req.json();
 		const { full_name, email, company, source, message } = body;
-
-        console.log('Received lead:', { full_name, email, company, source, message });
 		// Basic validation
 		if (!full_name || !email) {
 			return NextResponse.json({ error: 'Full name and email are required.' }, { status: 400 });
@@ -24,7 +22,6 @@ export async function POST(req: NextRequest) {
 			.single();
 
 		if (error) {
-            console.log('Supabase error:', error);
 			return NextResponse.json({ error: error.message }, { status: 400 });
 		}
 
